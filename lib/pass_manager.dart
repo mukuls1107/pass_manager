@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:pass_manager/view_pass.dart';
+
 import 'add_pass.dart';
 
 void displayMenu() {
@@ -17,12 +19,10 @@ void displayMenu() {
     if (choice != null) {
       switch (choice) {
         case 1:
-          print("You chose to add a password.");
           addPassword();
           break;
         case 2:
-          print("You chose to view passwords.");
-          break;
+          viewPasswords();
         case 3:
           print("You chose to delete a password.");
           break;

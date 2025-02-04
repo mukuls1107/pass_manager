@@ -2,9 +2,9 @@ import 'dart:io';
 import 'dart:convert';
 
 addPassword() {
-  print("Enter account name: ");
+  stdout.write("\nEnter account name: ");
   String? account = stdin.readLineSync();
-  print("Enter password: ");
+  stdout.write("\nEnter password: ");
   String? password = stdin.readLineSync();
 
   if (account == null ||
