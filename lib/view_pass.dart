@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 
 viewPasswords() {
-  print("\nStored Passwords:");
   var fileName = File("data/passwords.json");
   Map<String, dynamic> passwords = {};
 
@@ -10,9 +9,12 @@ viewPasswords() {
     String fileContent = fileName.readAsStringSync();
     if (fileContent.isNotEmpty) {
       passwords = jsonDecode(fileContent);
+    } else {
+      print("No passwords saved yet!");
+      return;
     }
   }
-
+  print("===== Stored Passwords =====");
   passwords.forEach((key, value) {
     print("$key -> $value");
   });

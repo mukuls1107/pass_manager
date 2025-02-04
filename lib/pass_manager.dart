@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:pass_manager/delete_pass.dart';
 import 'package:pass_manager/view_pass.dart';
 
 import 'add_pass.dart';
@@ -23,8 +24,9 @@ void displayMenu() {
           break;
         case 2:
           viewPasswords();
+          break;
         case 3:
-          print("You chose to delete a password.");
+          deletePass();
           break;
         case 4:
           print("Exiting program... Goodbye!");
