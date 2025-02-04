@@ -3,7 +3,7 @@ import 'dart:io';
 
 viewPasswords() {
   print("\nStored Passwords:");
-  var fileName = File("passwords.json");
+  var fileName = File("data/passwords.json");
   Map<String, dynamic> passwords = {};
 
   if (fileName.existsSync()) {

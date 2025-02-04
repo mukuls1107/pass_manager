@@ -17,7 +17,7 @@ addPassword() {
 
   try {
     print("Writing data in file...");
-    var fileName = File("passwords.json");
+    var fileName = File("data/passwords.json");
     Map<String, dynamic> passwords = {};
 
     if (fileName.existsSync()) {
