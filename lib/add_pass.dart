@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:convert';
+import 'encryption.dart' as encrypt;
 
 addPassword() {
   stdout.write("\nEnter account name: ");
@@ -27,7 +28,11 @@ addPassword() {
       }
     }
 
-    passwords[account] = password;
+    // Password encrypted here
+    var encryptedPassword = encrypt.encryptPassword(password);
+    print("🔐 Encrypted Password: $encryptedPassword"); // DEBUG
+
+    passwords[account] = encryptedPassword;
 
     fileName.writeAsStringSync(jsonEncode(passwords));
     print("✅ Password saved successfully!");
